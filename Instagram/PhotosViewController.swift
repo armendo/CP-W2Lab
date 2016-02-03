@@ -40,7 +40,6 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
 //                            NSLog("response: \(responseDictionary)")
                             self.requestData    =   responseDictionary["data"] as! NSArray
                             self.tableView.reloadData()
-                            
                     }
                 }
         });
@@ -56,21 +55,10 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
     // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
     // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
 //    self.requestData["data"]![0]["likes"]!!["data"]!![0]["profile_picture"]
-    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! PhotoCell
-        let profile          =   requestData[indexPath.row]["likes"]!!["data"]!![0]["profile_picture"] as! String
-        let imageUrl    = NSURL(string: profile)
-
-        print(profile)
-//        let posterPath  = movie["poster_path"] as! String
-//        let baseUrl = "http://image.tmdb.org/t/p/w342"
-//        
-//        let imageUrl    = NSURL(string: baseUrl + posterPath)
-//        
-//        cell.movieImage.setImageWithURL(imageUrl!)
-//        
-//        
-//        
+        let profile         =   requestData[indexPath.row]["likes"]!!["data"]!![0]["profile_picture"] as! String
+        let imageUrl        =   NSURL(string: profile)
         cell.photo.setImageWithURL(imageUrl!)
         return cell
     }
