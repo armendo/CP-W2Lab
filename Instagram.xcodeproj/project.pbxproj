@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A16E90A8120F3EA08FB7173E /* Pods_Instagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B973AA56C4B447F973502C27 /* Pods_Instagram.framework */; };
 		C10390FB1C5AECA5000422ED /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10390FA1C5AECA5000422ED /* PhotoCell.swift */; };
+		C128234F1C6420C00003EBC7 /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C128234E1C6420C00003EBC7 /* PhotoDetailsViewController.swift */; };
+		C12823511C64277D0003EBC7 /* FullScreenPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12823501C64277D0003EBC7 /* FullScreenPhotoViewController.swift */; };
 		C1500AEB1C5AE66800C08445 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1500AEA1C5AE66800C08445 /* AppDelegate.swift */; };
 		C1500AED1C5AE66800C08445 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1500AEC1C5AE66800C08445 /* PhotosViewController.swift */; };
 		C1500AF01C5AE66800C08445 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1500AEE1C5AE66800C08445 /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 		B973AA56C4B447F973502C27 /* Pods_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC514C1004197C0C942D4303 /* Pods-Instagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Instagram/Pods-Instagram.debug.xcconfig"; sourceTree = "<group>"; };
 		C10390FA1C5AECA5000422ED /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		C128234E1C6420C00003EBC7 /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
+		C12823501C64277D0003EBC7 /* FullScreenPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenPhotoViewController.swift; sourceTree = "<group>"; };
 		C1500AE71C5AE66800C08445 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1500AEA1C5AE66800C08445 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1500AEC1C5AE66800C08445 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
@@ -80,15 +84,25 @@
 		C1500AE91C5AE66800C08445 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				C1DC6D101C64E41E00507EA6 /* ViewControllers */,
 				C1500AEA1C5AE66800C08445 /* AppDelegate.swift */,
 				C10390FA1C5AECA5000422ED /* PhotoCell.swift */,
-				C1500AEC1C5AE66800C08445 /* PhotosViewController.swift */,
 				C1500AEE1C5AE66800C08445 /* Main.storyboard */,
 				C1500AF11C5AE66800C08445 /* Assets.xcassets */,
 				C1500AF31C5AE66800C08445 /* LaunchScreen.storyboard */,
 				C1500AF61C5AE66800C08445 /* Info.plist */,
 			);
 			path = Instagram;
+			sourceTree = "<group>";
+		};
+		C1DC6D101C64E41E00507EA6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C1500AEC1C5AE66800C08445 /* PhotosViewController.swift */,
+				C128234E1C6420C00003EBC7 /* PhotoDetailsViewController.swift */,
+				C12823501C64277D0003EBC7 /* FullScreenPhotoViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,9 +228,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C128234F1C6420C00003EBC7 /* PhotoDetailsViewController.swift in Sources */,
 				C1500AED1C5AE66800C08445 /* PhotosViewController.swift in Sources */,
 				C10390FB1C5AECA5000422ED /* PhotoCell.swift in Sources */,
 				C1500AEB1C5AE66800C08445 /* AppDelegate.swift in Sources */,
+				C12823511C64277D0003EBC7 /* FullScreenPhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
